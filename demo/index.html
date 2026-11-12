@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Демо-страницы для бизнеса Братска</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{
+  --bg:#f4f2ed; --surface:#fffdf8; --ink:#1b1d21; --muted:#5d6166; --dim:#868a90;
+  --line:#dedbd3; --accent:#b8431f; --accent-ink:#ffffff;
+  --font-display:'Onest'; --font-body:'Onest'; --display-weight:600;
+}
+.gallery-head{padding:56px 0 24px;max-width:62ch}
+.gallery-head h1{font-size:clamp(34px,4.6vw,52px)}
+.gallery-head p{margin-top:16px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:64px}
+.tile{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit}
+.tile:hover{border-color:var(--dim)}
+.swatch{height:8px}
+.tile-body{padding:20px 20px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tile-cat{font-size:12.5px;color:var(--muted)}
+.tile-name{font-family:var(--font-display);font-size:22px;letter-spacing:-.02em}
+.tile-desc{font-size:14px;color:var(--muted);flex:1}
+.tile-link{font-size:14px;color:var(--accent);font-weight:500;margin-top:8px}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.gallery-head{padding-top:36px}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-in">
+    <span class="logo">Демо<i>.</i></span>
+    <span class="demo-badge">примеры</span>
+    <nav class="nav" aria-label="Навигация"><a href="../">К лидам</a></nav>
+  </div>
+</header>
+<main id="main" class="container">
+  <div class="gallery-head">
+    <h1>Страницы для бизнеса Братска</h1>
+    <p>Десять примеров под разные сферы. Открываются на телефоне, работают без интернета после загрузки. Названия и цены вымышлены: это демонстрация структуры и стиля.</p>
+  </div>
+  <div class="grid">
+    <a class="tile" href="coffee.html">
+      <div class="swatch" style="background:#d9a05b"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Кафе и рестораны</div>
+        <div class="tile-name">Пар</div>
+        <div class="tile-desc">Обжариваем зерно в Братске, печём круассаны к открытию. Завтраки до полудня, летом работает терраса.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="flowers.html">
+      <div class="swatch" style="background:#9c2f46"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Цветы</div>
+        <div class="tile-name">Стебли</div>
+        <div class="tile-desc">Собираем в мастерской на Мира из свежих поставок. Присылаем фото перед отправкой, доставляем по городу за два часа.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="beauty.html">
+      <div class="swatch" style="background:#6b3f5e"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Красота</div>
+        <div class="tile-name">Тон</div>
+        <div class="tile-desc">Шесть мастеров на Южной. Онлайн-запись на сегодня, честные цены и кофе, пока сохнет голова.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="repair.html">
+      <div class="swatch" style="background:#b8431f"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Стройка и ремонт</div>
+        <div class="tile-name">Основа</div>
+        <div class="tile-desc">Своя бригада, смета в договоре, фотоотчёт каждый день. Начинаем с замера, а не с обещаний.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="furniture.html">
+      <div class="swatch" style="background:#4f5b3a"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Мебель</div>
+        <div class="tile-name">Форма</div>
+        <div class="tile-desc">Кухни, шкафы и столы по вашим размерам. Замер бесплатно, срок три недели, сборка включена.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="auto.html">
+      <div class="swatch" style="background:#e04b3a"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Авто</div>
+        <div class="tile-name">Ось</div>
+        <div class="tile-desc">Диагностика при вас, запчасти с выбором, гарантия на работы двенадцать месяцев. Запись на сегодня.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="hotel.html">
+      <div class="swatch" style="background:#2f5d62"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Отели и отдых</div>
+        <div class="tile-name">Берег</div>
+        <div class="tile-desc">Двенадцать номеров, завтрак включён, парковка во дворе. До плотины десять минут, до центра — пять.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="medicine.html">
+      <div class="swatch" style="background:#1f6f66"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Медицина</div>
+        <div class="tile-name">Медика</div>
+        <div class="tile-desc">Терапевт, стоматология, УЗИ и анализы. Запись онлайн, заключение на руки, без навязанных обследований.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="store.html">
+      <div class="swatch" style="background:#2f4f9e"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Магазины</div>
+        <div class="tile-name">Полка</div>
+        <div class="tile-desc">Посуда, текстиль, бытовая химия и мелочи. Самовывоз в день заказа, доставка по Братску — 300 ₽.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+    <a class="tile" href="services.html">
+      <div class="swatch" style="background:#3f6b45"></div>
+      <div class="tile-body">
+        <div class="tile-cat">Услуги</div>
+        <div class="tile-name">Мастер</div>
+        <div class="tile-desc">Электрика, сантехника, сборка мебели. Приезжаем в день заявки, цену называем до начала работ.</div>
+        <div class="tile-link">Открыть пример</div>
+      </div>
+    </a>
+  </div>
+</main>
+<footer class="footer">
+  <div class="container footer-in">
+    <p class="demo-note">Примеры не являются действующими сайтами компаний. Контакты, цены и названия — вымышленные.</p>
+    <p><a href="../">Вернуться к списку лидов</a></p>
+  </div>
+</footer>
+</body>
+</html>

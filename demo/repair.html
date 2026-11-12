@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Основа — Стройка и ремонт в Братске · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --ink: #17181a;
+  --muted: #5d6167;
+  --dim: #868b91;
+  --line: #e0e0dc;
+  --accent: #b8431f;
+  --accent-hover: #b8431f;
+  --accent-ink: #ffffff;
+  --font-display: 'Onest';
+  --font-body: 'Onest';
+  --display-weight: 600;
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="header">
+  <div class="container header-in">
+    <a class="logo" href="#main">Основа<i>.</i></a>
+    <span class="demo-badge">демо</span>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#services">Работы</a>
+      <a href="#about">Как работаем</a>
+      <a href="#contact">Замер</a>
+    </nav>
+    <a class="btn primary" href="#contact">Заявка</a>
+  </div>
+</header>
+<main id="main">
+<section class="section container" style="padding-bottom:32px">
+  <p class="kicker">Ремонт квартир · Братск</p>
+  <h1 style="max-width:16ch">Ремонт квартиры под ключ за девяносто дней</h1>
+  <p class="lead">Своя бригада, смета в договоре, фотоотчёт каждый день. Начинаем с замера, а не с обещаний.</p>
+  <div class="art wide" style="margin-top:32px">
+    <svg viewBox="0 0 900 420" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <rect x="90" y="96" width="330" height="240" rx="6"/>
+        <path d="M146 96v240M202 96v240" opacity=".35"/>
+        <path d="M440 236l96-72 26 34-96 72z"/>
+        <path d="M520 196l44-34" stroke-width="5"/>
+        <rect x="470" y="310" width="150" height="26" rx="13"/>
+        <path d="M520 310v-16M570 310v-16" opacity=".5"/>
+        <path d="M700 96v240M790 96v240M700 96h90M700 336h90" opacity=".35"/>
+      </g>
+      <circle cx="545" cy="323" r="6" fill="var(--accent)"/>
+      <path d="M236 150h120M236 186h84" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+    </svg></div>
+  <dl class="specs" style="margin:32px 0 0">
+    <div class="spec">
+      <dt>90 дней</dt>
+      <dd>Средний срок ремонта под ключ</dd>
+    </div>
+    <div class="spec">
+      <dt>2 года</dt>
+      <dd>Гарантия на работы по договору</dd>
+    </div>
+    <div class="spec">
+      <dt>0 ₽</dt>
+      <dd>Выезд замерщика по Братску</dd>
+    </div>
+  </dl>
+</section>
+
+<section class="section container" id="services">
+  <div class="section-head">
+    <h2>Работы и цены</h2>
+    <p>Цены за м² без материалов. Точная смета — после замера, фиксируется в договоре.</p>
+  </div>
+  <ul class="items">
+    <li>
+      <span class="item-name">Косметический ремонт</span>
+      <span class="price">от 6 500 ₽/м²</span>
+      <span class="item-desc">Обои, покраска, полы, потолки</span>
+    </li>
+    <li>
+      <span class="item-name">Капитальный ремонт</span>
+      <span class="price">от 12 000 ₽/м²</span>
+      <span class="item-desc">Стяжка, электрика, сантехника, отделка</span>
+    </li>
+    <li>
+      <span class="item-name">Дизайнерский ремонт</span>
+      <span class="price">от 18 000 ₽/м²</span>
+      <span class="item-desc">По проекту дизайнера, сложные решения</span>
+    </li>
+    <li>
+      <span class="item-name">Санузел под ключ</span>
+      <span class="price">от 180 000 ₽</span>
+      <span class="item-desc">Гидроизоляция, плитка, сантехника</span>
+    </li>
+    <li>
+      <span class="item-name">Электрика</span>
+      <span class="price">от 900 ₽/точка</span>
+      <span class="item-desc">Замена проводки, щиток, розетки</span>
+    </li>
+    <li>
+      <span class="item-name">Натяжной потолок</span>
+      <span class="price">от 700 ₽/м²</span>
+      <span class="item-desc">Матовый, сатин, многоуровневый</span>
+    </li>
+    <li>
+      <span class="item-name">Плитка</span>
+      <span class="price">от 1 200 ₽/м²</span>
+      <span class="item-desc">Укладка, затирка, выравнивание</span>
+    </li>
+  </ul>
+</section>
+
+<section class="section container about" id="about">
+  <div>
+    <h2>Как проходит ремонт</h2>
+    <p>Замерщик приезжает в день обращения или на следующий. Считает объём работ и материалы, показывает примеры объектов.</p>
+    <p>Перед началом вы получаете смету и график. Каждый вечер бригадир присылает фото: что сделано, что завтра. Материалы закупаем по чекам.</p>
+  </div>
+  <div>
+    <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Четыре шага</h3>
+    <div class="steps" style="grid-template-columns:1fr;gap:20px">
+      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+        <div class="step-num" style="font-size:24px;margin:0">01</div>
+        <div><h3>Замер</h3><p>Бесплатно, по Братску. Считаем объём и срок.</p></div>
+      </div>
+      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+        <div class="step-num" style="font-size:24px;margin:0">02</div>
+        <div><h3>Смета</h3><p>Фиксированная сумма и график в договоре.</p></div>
+      </div>
+      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+        <div class="step-num" style="font-size:24px;margin:0">03</div>
+        <div><h3>Ремонт</h3><p>Ежедневный фотоотчёт, оплата по этапам.</p></div>
+      </div>
+      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+        <div class="step-num" style="font-size:24px;margin:0">04</div>
+        <div><h3>Приёмка</h3><p>Проверяем вместе, устраняем замечания.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding-bottom:16px">
+  <div class="cta">
+    <h2>Замер на этой неделе — бесплатно</h2>
+    <p style="max-width:32ch;color:inherit;opacity:.85">Скажите адрес и что нужно сделать</p>
+    <a class="btn" href="#contact">Оставить заявку</a>
+  </div>
+</section>
+
+<section class="section container contact" id="contact">
+  <div>
+    <h2>Вызвать замерщика</h2>
+    <p>Перезвоним в рабочее время, уточним адрес и удобное время.</p>
+    <dl>
+      <div><dt>Адрес</dt><dd>Братск, Индустриальный проезд, 8Б</dd></div>
+      <div><dt>Часы работы</dt><dd>Пн–Сб 09:00–19:00</dd></div>
+      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
+    </dl>
+    
+  </div>
+  <form class="form" data-demo-form aria-labelledby="form-title">
+  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
+  <div class="field">
+    <label for="f-name-repair">Как вас зовут</label>
+    <input id="f-name-repair" name="name" autocomplete="name" placeholder="Имя" required>
+  </div>
+  <div class="field">
+    <label for="f-phone-repair">Телефон</label>
+    <input id="f-phone-repair" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+  </div>
+  <div class="field">
+    <label for="f-msg-repair">Комментарий</label>
+    <textarea id="f-msg-repair" name="message" placeholder="Что нужно и когда удобно"></textarea>
+  </div>
+  <label class="check">
+    <input type="checkbox" name="consent" required>
+    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
+  </label>
+  <button class="btn primary block" type="submit">Отправить</button>
+  <p class="form-note" role="status" aria-live="polite"></p>
+</form>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container footer-in">
+    <p class="demo-note"><b>Основа</b> — демонстрационная страница для категории «Стройка и ремонт». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
+    <p><a href="index.html">Все примеры</a></p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = form.querySelector('.form-note');
+    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+    note.classList.add('ok');
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>

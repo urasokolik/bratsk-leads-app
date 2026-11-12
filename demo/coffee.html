@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Пар — Кафе и рестораны в Братске · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{
+  --bg: #14110f;
+  --surface: #1d1916;
+  --ink: #f3ede4;
+  --muted: #b6a795;
+  --dim: #8b7d6d;
+  --line: #2e2723;
+  --accent: #d9a05b;
+  --accent-hover: #d9a05b;
+  --accent-ink: #1a120a;
+  --font-display: 'Unbounded';
+  --font-body: 'Onest';
+  --display-weight: 500;
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="header">
+  <div class="container header-in">
+    <a class="logo" href="#main">Пар<i>.</i></a>
+    <span class="demo-badge">демо</span>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#services">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="btn primary" href="#contact">Заявка</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero container">
+  <div class="hero-copy">
+    <p class="kicker">Кофейня · Братск</p>
+    <h1>Кофе на Кирова, 18 — с восьми утра</h1>
+    <p class="lead">Обжариваем зерно в Братске, печём круассаны к открытию. Завтраки до полудня, летом работает терраса.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Оставить заявку</a>
+      <a class="btn quiet" href="#services">Цены</a>
+    </div>
+    <p class="hero-meta">Кирова, 18 · ежедневно 08:00–22:00</p>
+  </div>
+  <div class="art">
+    <svg viewBox="0 0 640 460" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <ellipse cx="300" cy="260" rx="196" ry="120" opacity=".28"/>
+        <circle cx="300" cy="250" r="132"/>
+        <circle cx="300" cy="250" r="104" stroke="var(--accent)"/>
+        <path d="M432 208h28a42 42 0 0 1 0 84h-28"/>
+        <path d="M238 96c-20-24 20-38 0-62M300 88c-20-24 20-38 0-62M362 96c-20-24 20-38 0-62" opacity=".45"/>
+        <path d="M214 330c52 20 120 20 172 0" opacity=".35"/>
+      </g>
+      <circle cx="264" cy="232" r="28" fill="var(--accent)" opacity=".5"/>
+      <path d="M520 348l58 58" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity=".4"/>
+    </svg></div>
+</section>
+
+<section class="facts container" aria-label="Коротко">
+  <div class="fact"><b>Своя обжарка</b><span>Зерно из Эфиопии и Колумбии, обжарка каждую неделю</span></div>
+  <div class="fact"><b>Завтраки с 8:00</b><span>Сырники, каши и омлеты до 12:00</span></div>
+  <div class="fact"><b>Терраса</b><span>Шесть столов во дворе, с мая по сентябрь</span></div>
+</section>
+
+<section class="section container" id="services">
+  <div class="section-head">
+    <h2>Меню</h2>
+    <p>Кухня работает до 21:30. Кофе и десерты — до закрытия.</p>
+  </div>
+  <ul class="items">
+    <li>
+      <span class="item-name">Эспрессо</span>
+      <span class="price">120 ₽</span>
+      <span class="item-desc">Двойной, 40 мл</span>
+    </li>
+    <li>
+      <span class="item-name">Капучино</span>
+      <span class="price">190 ₽</span>
+      <span class="item-desc">300 мл, на выбор молоко</span>
+    </li>
+    <li>
+      <span class="item-name">Флэт уайт</span>
+      <span class="price">210 ₽</span>
+      <span class="item-desc">Двойной эспрессо, 200 мл</span>
+    </li>
+    <li>
+      <span class="item-name">Фильтр</span>
+      <span class="price">180 ₽</span>
+      <span class="item-desc">V60, зерно недели</span>
+    </li>
+    <li>
+      <span class="item-name">Круассан</span>
+      <span class="price">150 ₽</span>
+      <span class="item-desc">С миндалём или классический</span>
+    </li>
+    <li>
+      <span class="item-name">Сырники</span>
+      <span class="price">280 ₽</span>
+      <span class="item-desc">Со сметаной и вареньем</span>
+    </li>
+    <li>
+      <span class="item-name">Сэндвич с индейкой</span>
+      <span class="price">320 ₽</span>
+      <span class="item-desc">На гриле, с сыром</span>
+    </li>
+    <li>
+      <span class="item-name">Чизкейк</span>
+      <span class="price">260 ₽</span>
+      <span class="item-desc">Нью-Йорк, с лимонной цедрой</span>
+    </li>
+  </ul>
+</section>
+
+<section class="section container about" id="about">
+  <div>
+    <h2>Кофейня, в которую заходят по пути</h2>
+    <p>Мы открылись в 2019 году на первом этаже дома на Кирова. За это время поменяли три кофемолки и ни разу — обжарщика.</p>
+    <p>Утром здесь забирают кофе перед работой, днём работают за столиками у окна. Wi-Fi есть, розетки есть, никто не просит уходить.</p>
+  </div>
+  <blockquote class="quote">Лучший кофе в городе — тот, за которым не нужно ехать через весь Братск.<footer>Из разговора с постоянным гостем</footer></blockquote>
+</section>
+
+<section class="section container contact" id="contact">
+  <div>
+    <h2>Забронировать стол или задать вопрос</h2>
+    <p>Ответим в течение дня. Для больших компаний — предупредите за сутки.</p>
+    <dl>
+      <div><dt>Адрес</dt><dd>Братск, ул. Кирова, 18</dd></div>
+      <div><dt>Часы работы</dt><dd>Ежедневно 08:00–22:00</dd></div>
+      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
+    </dl>
+    
+  </div>
+  <form class="form" data-demo-form aria-labelledby="form-title">
+  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
+  <div class="field">
+    <label for="f-name-coffee">Как вас зовут</label>
+    <input id="f-name-coffee" name="name" autocomplete="name" placeholder="Имя" required>
+  </div>
+  <div class="field">
+    <label for="f-phone-coffee">Телефон</label>
+    <input id="f-phone-coffee" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+  </div>
+  <div class="field">
+    <label for="f-msg-coffee">Комментарий</label>
+    <textarea id="f-msg-coffee" name="message" placeholder="Что нужно и когда удобно"></textarea>
+  </div>
+  <label class="check">
+    <input type="checkbox" name="consent" required>
+    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
+  </label>
+  <button class="btn primary block" type="submit">Отправить</button>
+  <p class="form-note" role="status" aria-live="polite"></p>
+</form>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container footer-in">
+    <p class="demo-note"><b>Пар</b> — демонстрационная страница для категории «Кафе и рестораны». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
+    <p><a href="index.html">Все примеры</a></p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = form.querySelector('.form-note');
+    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+    note.classList.add('ok');
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>

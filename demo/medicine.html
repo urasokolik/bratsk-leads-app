@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Медика — Медицина в Братске · демо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{
+  --bg: #f4f8f7;
+  --surface: #ffffff;
+  --ink: #15211f;
+  --muted: #566661;
+  --dim: #7f8f89;
+  --line: #dbe6e3;
+  --accent: #1f6f66;
+  --accent-hover: #1f6f66;
+  --accent-ink: #f7fbfa;
+  --font-display: 'Onest';
+  --font-body: 'Inter';
+  --display-weight: 600;
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">К содержанию</a>
+<header class="header">
+  <div class="container header-in">
+    <a class="logo" href="#main">Медика<i>.</i></a>
+    <span class="demo-badge">демо</span>
+    <nav class="nav" aria-label="Разделы страницы">
+      <a href="#services">Приём</a>
+      <a href="#about">Клиника</a>
+      <a href="#contact">Запись</a>
+    </nav>
+    <a class="btn primary" href="#contact">Заявка</a>
+  </div>
+</header>
+<main id="main">
+<section class="hero-split">
+  <div class="container hero-split-in">
+    <div class="hero-copy">
+      <p class="kicker">Клиника · Братск</p>
+      <h1>Клиника на Мира: приём в день обращения</h1>
+      <p class="lead">Терапевт, стоматология, УЗИ и анализы. Запись онлайн, заключение на руки, без навязанных обследований.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Оставить заявку</a>
+        <a class="btn quiet" href="#services">Цены</a>
+      </div>
+      <p class="hero-meta">Мира, 45 · пн–сб 08:00–20:00</p>
+    </div>
+    <div class="art">
+    <svg viewBox="0 0 640 460" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M240 82v112a78 78 0 0 0 156 0V82"/>
+        <circle cx="240" cy="70" r="12"/><circle cx="396" cy="70" r="12"/>
+        <path d="M318 272v54a62 62 0 0 0 124 0v-22"/>
+        <circle cx="442" cy="278" r="30"/>
+        <circle cx="442" cy="278" r="17" stroke="var(--accent)"/>
+        <path d="M110 364h70l22-34 26 66 22-32h120" stroke="var(--accent)"/>
+      </g>
+      <circle cx="318" cy="182" r="44" fill="var(--accent)" opacity=".12"/>
+    </svg></div>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="cards">
+    <div class="card"><h3>Терапия</h3><p>Осмотр, диагноз, лечение. Направления — по показаниям, а не по плану.</p></div>
+    <div class="card"><h3>Стоматология</h3><p>Лечение, гигиена, протезирование. Смета до начала лечения.</p></div>
+    <div class="card"><h3>Диагностика</h3><p>УЗИ, ЭКГ, анализы. Результаты на руки и на почту.</p></div>
+  </div>
+</section>
+
+<section class="section container" id="services">
+  <div class="section-head">
+    <h2>Приём и цены</h2>
+    <p>Цены за приём без стоимости анализов и процедур. Смету лечения согласуем заранее.</p>
+  </div>
+  <ul class="items">
+    <li>
+      <span class="item-name">Терапевт</span>
+      <span class="price">1 200 ₽</span>
+      <span class="item-desc">Первичный приём, 30 минут</span>
+    </li>
+    <li>
+      <span class="item-name">Стоматолог-терапевт</span>
+      <span class="price">от 1 500 ₽</span>
+      <span class="item-desc">Осмотр и лечение кариеса</span>
+    </li>
+    <li>
+      <span class="item-name">УЗИ</span>
+      <span class="price">1 800 ₽</span>
+      <span class="item-desc">Одно исследование</span>
+    </li>
+    <li>
+      <span class="item-name">Общий анализ крови</span>
+      <span class="price">600 ₽</span>
+      <span class="item-desc">Результат на следующий день</span>
+    </li>
+    <li>
+      <span class="item-name">Гигиена полости рта</span>
+      <span class="price">3 500 ₽</span>
+      <span class="item-desc">Ультразвук и полировка</span>
+    </li>
+    <li>
+      <span class="item-name">Детский приём</span>
+      <span class="price">1 100 ₽</span>
+      <span class="item-desc">Терапевт или стоматолог</span>
+    </li>
+    <li>
+      <span class="item-name">ЭКГ</span>
+      <span class="price">900 ₽</span>
+      <span class="item-desc">С расшифровкой</span>
+    </li>
+  </ul>
+</section>
+
+<section class="section container" id="about">
+  <div class="about" style="padding:0">
+    <div>
+      <h2>Клиника на первом этаже</h2>
+      <p>Работаем с 2016 года. Врачи принимают по записи, поэтому в коридоре не собирается очередь.</p>
+      <p>Перед лечением объясняем варианты и стоимость. Если можно подождать или обойтись профилактикой — говорим об этом прямо.</p>
+    </div>
+    <div>
+      <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Как записаться</h3>
+      <div class="steps" style="grid-template-columns:1fr;gap:20px">
+        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+          <div class="step-num" style="font-size:24px;margin:0">01</div>
+          <div><h3>Выберите врача</h3><p>В прайсе — специализация и стоимость приёма.</p></div>
+        </div>
+        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+          <div class="step-num" style="font-size:24px;margin:0">02</div>
+          <div><h3>Выберите время</h3><p>Онлайн-запись или звонок. Свободные окна на сегодня.</p></div>
+        </div>
+        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
+          <div class="step-num" style="font-size:24px;margin:0">03</div>
+          <div><h3>Приходите</h3><p>Возьмите паспорт и полис, остальное оформим на месте.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section container contact" id="contact">
+  <div>
+    <h2>Записаться на приём</h2>
+    <p>Оставьте номер — администратор перезвонит и подберёт время.</p>
+    <dl>
+      <div><dt>Адрес</dt><dd>Братск, ул. Мира, 45</dd></div>
+      <div><dt>Часы работы</dt><dd>Пн–Сб 08:00–20:00</dd></div>
+      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
+    </dl>
+    
+  </div>
+  <form class="form" data-demo-form aria-labelledby="form-title">
+  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
+  <div class="field">
+    <label for="f-name-medicine">Как вас зовут</label>
+    <input id="f-name-medicine" name="name" autocomplete="name" placeholder="Имя" required>
+  </div>
+  <div class="field">
+    <label for="f-phone-medicine">Телефон</label>
+    <input id="f-phone-medicine" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+  </div>
+  <div class="field">
+    <label for="f-msg-medicine">Комментарий</label>
+    <textarea id="f-msg-medicine" name="message" placeholder="Что нужно и когда удобно"></textarea>
+  </div>
+  <label class="check">
+    <input type="checkbox" name="consent" required>
+    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
+  </label>
+  <button class="btn primary block" type="submit">Отправить</button>
+  <p class="form-note" role="status" aria-live="polite"></p>
+</form>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container footer-in">
+    <p class="demo-note"><b>Медика</b> — демонстрационная страница для категории «Медицина». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
+    <p><a href="index.html">Все примеры</a></p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var note = form.querySelector('.form-note');
+    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+    note.classList.add('ok');
+    form.reset();
+  });
+});
+</script>
+</body>
+</html>
