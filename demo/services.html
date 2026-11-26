@@ -4,211 +4,151 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Мастер — Услуги в Братске · демо</title>
+<title>Чисто-Братск — Услуги · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #f5f4f0;
-  --surface: #fffefa;
-  --ink: #1b1c19;
-  --muted: #5f6157;
-  --dim: #888a80;
-  --line: #dedcd3;
-  --accent: #3f6b45;
-  --accent-hover: #3f6b45;
-  --accent-ink: #f8fbf7;
-  --font-display: 'Onest';
-  --font-body: 'Onest';
-  --display-weight: 600;
+  --bg:#f4f6f9; --surface:#ffffff; --ink:#151d2e; --muted:#556178;
+  --dim:#848fa3; --line:#dde2ec; --accent:#2b5ce6; --accent-ink:#ffffff;
+  --font-display:'Onest'; --font-body:'Onest'; --display-weight:600;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-srv h1{font-size:clamp(34px,4.4vw,54px);max-width:15ch}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Мастер<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Работы</a>
-      <a href="#about">Как работаем</a>
-      <a href="#contact">Вызвать</a>
+    <a class="logo" href="#top">Чисто-Братск<i>.</i></a>
+    <span class="demo-badge">Демо · Услуги</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#calc">Расчёт</a><a href="#prices">Тарифы</a><a href="#contact">Вызов</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Заказать выезд</a>
   </div>
 </header>
 <main id="main">
-<section class="section container" style="padding-bottom:32px">
-  <p class="kicker">Мастер на дом · Братск</p>
-  <h1 style="max-width:16ch">Починить, повесить, собрать — за один визит</h1>
-  <p class="lead">Электрика, сантехника, сборка мебели. Приезжаем в день заявки, цену называем до начала работ.</p>
-  <div class="art wide" style="margin-top:32px">
-    <svg viewBox="0 0 900 420" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <rect x="150" y="176" width="300" height="170" rx="14"/>
-        <path d="M240 176v-26a20 20 0 0 1 20-20h80a20 20 0 0 1 20 20v26"/>
-        <path d="M150 236h300"/>
-        <path d="M286 206h28v30h-28z"/>
-        <path d="M540 122l64 64M604 122l-64 64" opacity=".7"/>
-        <rect x="668" y="196" width="90" height="150" rx="10"/>
-        <path d="M690 196v-28h46v28" opacity=".6"/>
-        <path d="M700 236h26M700 264h26M700 292h26" opacity=".45"/>
-        <path d="M540 300h120M540 330h84" opacity=".35"/>
-      </g>
-      <path d="M168 206h264" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
-      <circle cx="600" cy="310" r="34" fill="var(--accent)" opacity=".16"/>
-    </svg></div>
-  <dl class="specs" style="margin:32px 0 0">
-    <div class="spec">
-      <dt>В день заявки</dt>
-      <dd>Свободные окна с 09:00</dd>
+
+<section class="hero-srv container" id="calc">
+  <div class="split-2">
+    <div class="hero-enter">
+      <p class="kicker"><span class="dot"></span>Клининг и выездной сервис · Братск</p>
+      <h1>Уборка квартир и офисов с фиксированной ценой</h1>
+      <p class="lead" style="margin-top:16px">Работаем по чек-листу, используем безопасные средства без резкого запаха. Приезжаем точно ко времени.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Вызвать бригаду</a>
+        <a class="btn quiet" href="#prices">Смотреть тарифы</a>
+      </div>
     </div>
-    <div class="spec">
-      <dt>500 ₽</dt>
-      <dd>Выезд и осмотр, входит в стоимость работ</dd>
+    <div class="panel">
+      <h2 style="font-size:22px;margin-bottom:14px">Рассчитать уборку</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px">1. Количество комнат</p>
+      <div class="chip-group" id="srvRooms">
+        <button type="button" class="choice-btn active" data-rp="2800" data-rn="1-комнатная">1-комн.</button>
+        <button type="button" class="choice-btn" data-rp="3500" data-rn="2-комнатная">2-комн.</button>
+        <button type="button" class="choice-btn" data-rp="4300" data-rn="3-комнатная">3-комн.</button>
+        <button type="button" class="choice-btn" data-rp="5400" data-rn="Дом / 4+">4+ / дом</button>
+      </div>
+      <div style="display:grid;gap:8px;margin-top:16px">
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" class="s-ext" value="1200"> Мытьё окон (в квартире)</span><span class="num">+ 1 200 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" class="s-ext" value="1800"> Химчистка дивана (3 места)</span><span class="num">+ 1 800 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" class="s-ext" value="700"> Мытьё духовки и холодильника</span><span class="num">+ 700 ₽</span></label>
+      </div>
+      <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline">
+        <span style="font-size:13.5px;color:var(--muted)">Итого за выезд</span>
+        <strong class="num" id="srvSum" style="font-size:26px;color:var(--accent)">2 800 ₽</strong>
+      </div>
+      <a class="btn primary" href="#contact" style="width:100%;margin-top:14px">Заказать по этому расчёту</a>
     </div>
-    <div class="spec">
-      <dt>6 месяцев</dt>
-      <dd>Гарантия на выполненные работы</dd>
-    </div>
-  </dl>
+  </div>
 </section>
 
-<section class="section container" id="services">
-  <div class="section-head">
-    <h2>Работы и цены</h2>
-    <p>Цена за работу без материалов. Материалы можем купить сами, чек отдаём.</p>
-  </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Вызов мастера</span>
-      <span class="price">500 ₽</span>
-      <span class="item-desc">Осмотр и мелкий ремонт до 30 минут</span>
-    </li>
-    <li>
-      <span class="item-name">Сборка шкафа</span>
-      <span class="price">от 1 500 ₽</span>
-      <span class="item-desc">Двухдверный, с регулировкой</span>
-    </li>
-    <li>
-      <span class="item-name">Замена смесителя</span>
-      <span class="price">1 200 ₽</span>
-      <span class="item-desc">Демонтаж, установка, проверка</span>
-    </li>
-    <li>
-      <span class="item-name">Розетка или выключатель</span>
-      <span class="price">600 ₽</span>
-      <span class="item-desc">Замена, подключение</span>
-    </li>
-    <li>
-      <span class="item-name">Повесить полку</span>
-      <span class="price">700 ₽</span>
-      <span class="item-desc">До 10 кг, с крепежом</span>
-    </li>
-    <li>
-      <span class="item-name">Поклейка обоев</span>
-      <span class="price">от 350 ₽/м²</span>
-      <span class="item-desc">Подготовка и поклейка</span>
-    </li>
-    <li>
-      <span class="item-name">Установка бойлера</span>
-      <span class="price">от 2 800 ₽</span>
-      <span class="item-desc">Крепление, подключение, проверка</span>
-    </li>
+<section class="section container" id="prices">
+  <div class="section-head"><h2>Тарифы на услуги</h2><p>Никаких доплат на месте, если объём соответствует заявке.</p></div>
+  <ul class="price-list">
+    <li class="price-row"><span class="price-name">Поддерживающая уборка</span><span class="price-desc">Пыль, полы, санузел, кухня</span><span class="price-val">от 2 800 ₽</span></li>
+    <li class="price-row"><span class="price-name">Генеральная уборка</span><span class="price-desc">Плитка, фасады, светильники, труднодоступные зоны</span><span class="price-val">от 5 200 ₽</span></li>
+    <li class="price-row"><span class="price-name">После ремонта</span><span class="price-desc">Удаление строительной пыли, пятен краски и клея</span><span class="price-val">от 130 ₽ / м²</span></li>
+    <li class="price-row"><span class="price-name">Химчистка мягкой мебели</span><span class="price-desc">Диваны, кресла, матрасы с выездом</span><span class="price-val">от 1 800 ₽</span></li>
   </ul>
 </section>
 
-<section class="section container about" id="about">
-  <div>
-    <h2>Один мастер, а не бригада незнакомцев</h2>
-    <p>Работаем вдвоём с 2018 года: принимаем заявки и выезжаем сами. Поэтому знаем, кто приедет к вам домой.</p>
-    <p>Перед началом называем цену и список работ. Если по ходу выясняется, что нужно больше — согласуем, а не ставим перед фактом.</p>
-  </div>
-  <div>
-    <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Как вызвать</h3>
-    <div class="steps" style="grid-template-columns:1fr;gap:20px">
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">01</div>
-        <div><h3>Опишите задачу</h3><p>Фото или пара слов — хватит, чтобы назвать цену.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">02</div>
-        <div><h3>Согласуйте время</h3><p>Приедем в тот же день или на следующий.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">03</div>
-        <div><h3>Работа</h3><p>Материалы привозим с собой, мусор забираем.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">04</div>
-        <div><h3>Оплата</h3><p>После проверки. Чек и гарантия — на руки.</p></div>
-      </div>
+<section class="section container" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Заказать выезд бригады</h2>
+      <p class="lead" style="margin-top:12px">Привозим профессиональную химию и оборудование с собой. Оплата после приёмки.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, все районы города</dd></div>
+        <div><dt>Режим работы</dt><dd>Ежедневно 08:00–21:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (914) 000-99-00</dd></div>
+      </dl>
     </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Заказать выезд</h3>
+      
+  <div class="field"><label for="svName">Имя</label><input id="svName" required placeholder="Татьяна"></div>
+  <div class="field"><label for="svPhone">Телефон</label><input id="svPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="svNote">Детали заказа</label><input id="svNote" value="1-комнатная квартира — 2 800 ₽"></div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
-
-<section class="container" style="padding-bottom:16px">
-  <div class="cta">
-    <h2>Свободное окно сегодня после обеда</h2>
-    <p style="max-width:32ch;color:inherit;opacity:.85">Скажите, что нужно сделать</p>
-    <a class="btn" href="#contact">Оставить заявку</a>
-  </div>
-</section>
-
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Вызвать мастера</h2>
-    <p>Оставьте номер и опишите задачу — перезвоним и назовём цену.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, выезд по городу</dd></div>
-      <div><dt>Часы работы</dt><dd>Ежедневно 09:00–21:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
-  </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-services">Как вас зовут</label>
-    <input id="f-name-services" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-services">Телефон</label>
-    <input id="f-phone-services" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-services">Комментарий</label>
-    <textarea id="f-msg-services" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
-</section>
-
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Мастер</b> — демонстрационная страница для категории «Услуги». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Услуги» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  let rp = 2800, rn = '1-комнатная';
+  const sum = document.getElementById('srvSum');
+  const note = document.getElementById('svNote');
+  const exts = document.querySelectorAll('.s-ext');
+  function upd() {
+    let ext = 0;
+    exts.forEach((c) => { if (c.checked) ext += Number(c.value); });
+    const total = rp + ext;
+    sum.textContent = total.toLocaleString('ru-RU') + ' ₽';
+    if (note) note.value = rn + (ext ? ' + доп. опции' : '') + ' — ' + total.toLocaleString('ru-RU') + ' ₽';
+  }
+  document.querySelectorAll('#srvRooms .choice-btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#srvRooms .choice-btn').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      rp = Number(b.dataset.rp); rn = b.dataset.rn; upd();
+    });
+  });
+  exts.forEach((c) => c.addEventListener('change', upd));
+})();
 </script>
 </body>
 </html>

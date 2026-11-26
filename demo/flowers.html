@@ -4,197 +4,177 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Стебли — Цветы в Братске · демо</title>
+<title>Стебли — Цветы · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #f5f2ea;
-  --surface: #fffdf8;
-  --ink: #1e2a23;
-  --muted: #5c6a60;
-  --dim: #7f8b81;
-  --line: #ddd5c4;
-  --accent: #9c2f46;
-  --accent-hover: #9c2f46;
-  --accent-ink: #fff8f4;
-  --font-display: 'Cormorant';
-  --font-body: 'Manrope';
-  --display-weight: 500;
+  --bg:#f6f2ea; --surface:#fffdf8; --ink:#1d2b22; --muted:#59675d;
+  --dim:#828e84; --line:#dfd7c7; --accent:#9e2a45; --accent-ink:#fff9f5;
+  --font-display:'Cormorant'; --font-body:'Manrope'; --display-weight:600;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-flowers h1{font-size:clamp(38px,5vw,66px);line-height:.98;max-width:13ch}
+.builder-box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.result-card{margin-top:20px;padding:18px;border-radius:12px;background:var(--bg);border:1px solid var(--line)}
+.result-title{font-family:var(--font-display);font-size:24px;line-height:1.1}
+.result-price{font-size:22px;font-weight:600;color:var(--accent);margin-top:4px}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Стебли<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Букеты</a>
-      <a href="#about">О мастерской</a>
-      <a href="#contact">Заказать</a>
+    <a class="logo" href="#top">Стебли<i>.</i></a>
+    <span class="demo-badge">Демо · Цветы</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#builder">Подобрать букет</a><a href="#catalog">Цены</a><a href="#contact">Заказать</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Заказать букет</a>
   </div>
 </header>
 <main id="main">
-<section class="hero container">
-  <div class="hero-copy">
-    <p class="kicker">Цветочная мастерская · Братск</p>
-    <h1>Букет к девяти утра, если заказать до десяти вечера</h1>
-    <p class="lead">Собираем в мастерской на Мира из свежих поставок. Присылаем фото перед отправкой, доставляем по городу за два часа.</p>
-    <div class="actions">
-      <a class="btn primary" href="#contact">Оставить заявку</a>
-      <a class="btn quiet" href="#services">Цены</a>
+
+<section class="hero-flowers container" id="builder">
+  <div class="split-2">
+    <div class="hero-enter">
+      <p class="kicker"><span class="dot"></span>Цветочная мастерская · Мира, 32</p>
+      <h1>Букет к нужному часу из свежей поставки</h1>
+      <p class="lead" style="margin-top:16px">Собираем без дешёвой плёнки и лишнего декора. Привозим по Братску за 2 часа, фото отправляем до выезда курьера.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Заказать сейчас</a>
+        <a class="btn quiet" href="#catalog">Смотреть цены</a>
+      </div>
+      <p class="meta-line">Доставка по Центральному району — 300 ₽ · Самовывоз бесплатно</p>
     </div>
-    <p class="hero-meta">Мира, 32 · ежедневно 09:00–21:00</p>
+    <div class="builder-box">
+      <h2 style="font-size:24px;margin-bottom:14px">Подобрать букет за 10 секунд</h2>
+      <p style="font-size:13.5px;color:var(--muted);margin-bottom:12px">1. Выберите повод</p>
+      <div class="chip-group" id="occasionGroup">
+        <button class="choice-btn active" type="button" data-occ="День рождения">День рождения</button>
+        <button class="choice-btn" type="button" data-occ="Свидание">Свидание</button>
+        <button class="choice-btn" type="button" data-occ="Без повода">Без повода</button>
+        <button class="choice-btn" type="button" data-occ="Поздравление">Поздравление</button>
+      </div>
+      <div style="margin-top:18px">
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px">
+          <span style="color:var(--muted)">2. Бюджет</span>
+          <strong class="num" id="budgetLabel">3 500 ₽</strong>
+        </div>
+        <input type="range" id="budgetRange" min="1800" max="9000" step="200" value="3500">
+      </div>
+      <div class="result-card">
+        <div class="result-title" id="resTitle">Авторский сборный букет</div>
+        <div class="result-price num" id="resPrice">3 500 ₽</div>
+        <p id="resDesc" style="margin-top:8px;font-size:14px;color:var(--muted)">Пионовидные розы, диантусы, эвкалипт и матовая упаковка + открытка от руки.</p>
+      </div>
+      <a class="btn primary" href="#contact" id="pickOrderBtn" style="width:100%;margin-top:14px">Заказать этот вариант</a>
+    </div>
   </div>
-  <div class="art">
-    <svg viewBox="0 0 640 460" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M320 420V190"/>
-        <path d="M320 330c-56 0-92-34-104-78"/>
-        <path d="M320 274c56 0 92-34 104-78"/>
-        <path d="M320 366c-34 0-58-12-72-32M320 352c34 0 58-12 72-32" opacity=".5"/>
-        <path d="M236 396h168l-26 44h-116z" opacity=".7"/>
-      </g>
-      <g fill="none" stroke="currentColor" stroke-width="2">
-        <g transform="translate(320 128)">
-          <ellipse cx="0" cy="-34" rx="17" ry="30"/><ellipse cx="0" cy="34" rx="17" ry="30"/>
-          <ellipse cx="-34" cy="0" rx="30" ry="17"/><ellipse cx="34" cy="0" rx="30" ry="17"/>
-          <ellipse cx="-24" cy="-24" rx="15" ry="27" transform="rotate(45)"/>
-          <ellipse cx="24" cy="24" rx="15" ry="27" transform="rotate(45)"/>
-          <ellipse cx="-24" cy="24" rx="15" ry="27" transform="rotate(-45)"/>
-          <ellipse cx="24" cy="-24" rx="15" ry="27" transform="rotate(-45)"/>
-        </g>
-        <g transform="translate(196 196)" stroke="var(--accent)">
-          <circle cx="0" cy="-24" r="14"/><circle cx="21" cy="12" r="14"/><circle cx="-21" cy="12" r="14"/>
-        </g>
-        <g transform="translate(446 196)" stroke="var(--accent)">
-          <circle cx="0" cy="-24" r="14"/><circle cx="21" cy="12" r="14"/><circle cx="-21" cy="12" r="14"/>
-        </g>
-      </g>
-    </svg></div>
 </section>
 
-<section class="facts container" aria-label="Коротко">
-  <div class="fact"><b>Фото до отправки</b><span>Покажем букет и спросим, всё ли нравится</span></div>
-  <div class="fact"><b>Доставка 2 часа</b><span>По Братску — 300 ₽, самовывоз бесплатно</span></div>
-  <div class="fact"><b>Свежие поставки</b><span>Новые цветы по вторникам и пятницам</span></div>
-</section>
-
-<section class="section container" id="services">
+<section class="section container" id="catalog">
   <div class="section-head">
-    <h2>Букеты и цены</h2>
-    <p>Собираем по поводу и без. Если бюджет ограничен — скажите сумму, предложим вариант.</p>
+    <h2>Популярные форматы</h2>
+    <p>Точный состав подбираем под наличие свежих цветов в день заказа.</p>
   </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Монобукет</span>
-      <span class="price">1 900 ₽</span>
-      <span class="item-desc">15–25 стеблей одного цвета</span>
-    </li>
-    <li>
-      <span class="item-name">Авторский</span>
-      <span class="price">3 400 ₽</span>
-      <span class="item-desc">Сборный, в бумаге или вазе</span>
-    </li>
-    <li>
-      <span class="item-name">25 роз</span>
-      <span class="price">4 200 ₽</span>
-      <span class="item-desc">Российские или эквадорские</span>
-    </li>
-    <li>
-      <span class="item-name">Композиция в шляпе</span>
-      <span class="price">3 900 ₽</span>
-      <span class="item-desc">Стоит две недели и дольше</span>
-    </li>
-    <li>
-      <span class="item-name">Свадебный</span>
-      <span class="price">от 8 000 ₽</span>
-      <span class="item-desc">Букет невесты и бутоньерка</span>
-    </li>
-    <li>
-      <span class="item-name">Цветы с открыткой</span>
-      <span class="price">2 600 ₽</span>
-      <span class="item-desc">Открытку пишем от руки</span>
-    </li>
-    <li>
-      <span class="item-name">Оформление зала</span>
-      <span class="price">от 12 000 ₽</span>
-      <span class="item-desc">Свадьба, корпоратив, свидание</span>
-    </li>
-    <li>
-      <span class="item-name">Подписка на цветы</span>
-      <span class="price">5 600 ₽ / мес</span>
-      <span class="item-desc">Букет раз в неделю, со скидкой</span>
-    </li>
+  <ul class="price-list">
+    <li class="price-row"><span class="price-name">Монобукет</span><span class="price-desc">15–25 стеблей одного сорта (розы, хризантемы, тюльпаны)</span><span class="price-val">от 1 900 ₽</span></li>
+    <li class="price-row"><span class="price-name">Авторский сборный</span><span class="price-desc">Сезонные цветы, зелень, открытка от руки</span><span class="price-val">от 3 200 ₽</span></li>
+    <li class="price-row"><span class="price-name">Композиция в коробке</span><span class="price-desc">На флористической губке — не нужна ваза</span><span class="price-val">от 3 900 ₽</span></li>
+    <li class="price-row"><span class="price-name">25 эквадорских роз</span><span class="price-desc">Крупный бутон, стойкость 7–10 дней</span><span class="price-val">4 400 ₽</span></li>
+    <li class="price-row"><span class="price-name">Подписка на дом</span><span class="price-desc">4 свежих букета в месяц, каждую пятницу</span><span class="price-val">5 600 ₽</span></li>
   </ul>
 </section>
 
-<section class="section container about" id="about">
-  <div>
-    <h2>Мастерская, а не витрина</h2>
-    <p>Мы не держим цветы в холодильнике неделями: заказываем под конкретные букеты и разбираем остатки в композиции.</p>
-    <p>На каждый заказ присылаем фото. Если цветок не тот, что на фото, — меняем до отправки, а не после.</p>
-  </div>
-  <blockquote class="quote">Цветы должны выглядеть так же, как на фотографии, которую вы отправили маме.<footer>Правило мастерской</footer></blockquote>
-</section>
+<section class="section container" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Оформить доставку по Братску</h2>
+      <p class="lead" style="margin-top:12px">Перед выездом курьера присылаем фото готового букета в WhatsApp или Telegram.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, ул. Мира, 32</dd></div>
+        <div><dt>Режим работы</dt><dd>Ежедневно 09:00–21:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (914) 000-32-32</dd></div>
+      </dl>
+    </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Заказать букет</h3>
+      
+  <div class="field"><label for="fName">Ваше имя</label><input id="fName" required placeholder="Мария"></div>
+  <div class="field"><label for="fPhone">Телефон для фотоотчёта</label><input id="fPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="fNote">Комментарий (адрес, время, пожелания)</label><textarea id="fNote" placeholder="Кому, куда доставить и текст для открытки"></textarea></div>
 
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Заказать букет</h2>
-    <p>Напишите повод, бюджет и время доставки. Ответим и пришлём варианты.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, ул. Мира, 32</dd></div>
-      <div><dt>Часы работы</dt><dd>Ежедневно 09:00–21:00, заказы до 22:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
   </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-flowers">Как вас зовут</label>
-    <input id="f-name-flowers" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-flowers">Телефон</label>
-    <input id="f-phone-flowers" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-flowers">Комментарий</label>
-    <textarea id="f-msg-flowers" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
 </section>
-
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Стебли</b> — демонстрационная страница для категории «Цветы». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Цветы» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  let occ = 'День рождения';
+  const range = document.getElementById('budgetRange');
+  const lbl = document.getElementById('budgetLabel');
+  const title = document.getElementById('resTitle');
+  const price = document.getElementById('resPrice');
+  const desc = document.getElementById('resDesc');
+  const note = document.getElementById('fNote');
+  function update() {
+    const v = Number(range.value);
+    lbl.textContent = v.toLocaleString('ru-RU') + ' ₽';
+    price.textContent = v.toLocaleString('ru-RU') + ' ₽';
+    if (v < 2600) {
+      title.textContent = 'Компактный комплимент · ' + occ;
+      desc.textContent = 'Кустовые розы, эвкалипт и сезонные акценты в крафтовой бумаге.';
+    } else if (v < 5000) {
+      title.textContent = 'Авторский сборный букет · ' + occ;
+      desc.textContent = 'Пионовидные розы, диантусы, альстромерия, зелень и открытка от руки.';
+    } else {
+      title.textContent = 'Крупная композиция или 25+ роз · ' + occ;
+      desc.textContent = 'Пышный объёмный букет или шляпная коробка премиум-сорта с доставкой.';
+    }
+    if (note) note.placeholder = occ + ', бюджет ' + v.toLocaleString('ru-RU') + ' ₽. Адрес и время доставки:';
+  }
+  document.querySelectorAll('#occasionGroup .choice-btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#occasionGroup .choice-btn').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      occ = b.dataset.occ;
+      update();
+    });
+  });
+  range.addEventListener('input', update);
+  update();
+})();
 </script>
 </body>
 </html>

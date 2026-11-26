@@ -4,209 +4,155 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Ось — Авто в Братске · демо</title>
+<title>Бокс 4 — Авто · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #14171b;
-  --surface: #1c2026;
-  --ink: #eef1f4;
-  --muted: #9aa7b4;
-  --dim: #74808d;
-  --line: #2a3038;
-  --accent: #e04b3a;
-  --accent-hover: #e04b3a;
-  --accent-ink: #170d0b;
-  --font-display: 'Unbounded';
-  --font-body: 'Onest';
-  --display-weight: 500;
+  --bg:#101317; --surface:#181c22; --ink:#edf0f4; --muted:#99a3b2;
+  --dim:#667080; --line:#272d36; --accent:#eb7328; --accent-ink:#170c04;
+  --font-display:'Unbounded'; --font-body:'Onest'; --display-weight:500;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-auto h1{font-size:clamp(32px,4.4vw,54px);max-width:15ch}
+.status-bar{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:8px;background:var(--surface);border:1px solid var(--line);font-size:13px;margin-bottom:18px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#35d07f}
+.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Ось<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Работы</a>
-      <a href="#about">Сервис</a>
-      <a href="#contact">Запись</a>
+    <a class="logo" href="#top">Бокс 4<i>.</i></a>
+    <span class="demo-badge">Демо · Авто</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#calc">Калькулятор ТО</a><a href="#prices">Работы</a><a href="#contact">Запись</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Записаться в бокс</a>
   </div>
 </header>
 <main id="main">
-<section class="section container" style="padding-bottom:32px">
-  <p class="kicker">Автосервис · Братск</p>
-  <h1 style="max-width:16ch">Автосервис, который объясняет, за что берёт деньги</h1>
-  <p class="lead">Диагностика при вас, запчасти с выбором, гарантия на работы двенадцать месяцев. Запись на сегодня.</p>
-  <div class="art wide" style="margin-top:32px">
-    <svg viewBox="0 0 900 420" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M110 340h680"/>
-        <path d="M180 340V180M640 340V180M180 180h460"/>
-        <path d="M250 300v-38c0-10 8-18 18-18h48l34-32h110l38 32h56c10 0 18 8 18 18v38"/>
-        <path d="M250 244h360" opacity=".35"/>
-        <circle cx="316" cy="300" r="26"/><circle cx="540" cy="300" r="26"/>
-        <circle cx="316" cy="300" r="9" stroke="var(--accent)"/><circle cx="540" cy="300" r="9" stroke="var(--accent)"/>
-        <path d="M700 120v120M670 120h60" opacity=".4"/>
-      </g>
-      <path d="M700 120l-18-28h36z" fill="var(--accent)"/>
-      <path d="M240 268h260" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-    </svg></div>
-  <dl class="specs" style="margin:32px 0 0">
-    <div class="spec">
-      <dt>12 месяцев</dt>
-      <dd>Гарантия на работы</dd>
+
+<section class="hero-auto container" id="calc">
+  <div class="split-2">
+    <div class="hero-enter">
+      <div class="status-bar"><span class="status-dot"></span>Сегодня свободны 2 из 4 подъёмников</div>
+      <h1>Ремонт и ТО без навязанных работ</h1>
+      <p class="lead" style="margin-top:16px">Японские, корейские и отечественные авто. Диагностика ходовой при вас, гарантия на работы — 6 месяцев.</p>
+      <div class="grid-3" style="margin-top:28px;gap:12px">
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600;color:var(--accent)">6 мес</div><div style="font-size:12.5px;color:var(--muted)">гарантия на ремонт</div></div>
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600">40 мин</div><div style="font-size:12.5px;color:var(--muted)">среднее время ТО</div></div>
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600">0 ₽</div><div style="font-size:12.5px;color:var(--muted)">осмотр при ремонте</div></div>
+      </div>
     </div>
-    <div class="spec">
-      <dt>4 подъёмника</dt>
-      <dd>Легковые и кроссоверы</dd>
+    <div class="panel">
+      <h2 style="font-size:22px;margin-bottom:14px">Калькулятор работ (работа без запчастей)</h2>
+      <div style="display:grid;gap:8px" id="autoOpts">
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" value="900" data-h="0.5" checked> Замена масла и фильтра</span><span class="num">900 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" value="800" data-h="0.5"> Диагностика ходовой на подъёмнике</span><span class="num">800 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" value="1400" data-h="1.0"> Замена тормозных колодок (ось)</span><span class="num">1 400 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" value="1800" data-h="1.0"> Развал-схождение 3D</span><span class="num">1 800 ₽</span></label>
+        <label class="opt-row"><span class="opt-left"><input type="checkbox" value="1200" data-h="0.5"> Компьютерная диагностика ошибок</span><span class="num">1 200 ₽</span></label>
+      </div>
+      <div class="calc-total">
+        <div>
+          <div style="font-size:12.5px;color:var(--muted)">Примерная сумма и время</div>
+          <div class="num" id="autoTime" style="font-size:14px;color:var(--muted)">~ 0.5 ч в боксе</div>
+        </div>
+        <div class="num" id="autoSum" style="font-size:26px;font-weight:600;color:var(--accent)">900 ₽</div>
+      </div>
+      <a class="btn primary" href="#contact" style="width:100%;margin-top:16px">Записаться на эти работы</a>
     </div>
-    <div class="spec">
-      <dt>Сегодня</dt>
-      <dd>Свободные окна на диагностику</dd>
-    </div>
-  </dl>
+  </div>
 </section>
 
-<section class="section container" id="services">
+<section class="section container" id="prices">
   <div class="section-head">
-    <h2>Работы и цены</h2>
-    <p>Цена работы без запчастей. Перед началом согласуем список и сумму.</p>
+    <h2>Основные услуги</h2>
+    <p>Точную цену по вашей модели автомобиля назовём по телефону за 2 минуты.</p>
   </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Компьютерная диагностика</span>
-      <span class="price">800 ₽</span>
-      <span class="item-desc">Считываем ошибки, объясняем причину</span>
-    </li>
-    <li>
-      <span class="item-name">Замена масла</span>
-      <span class="price">от 1 200 ₽</span>
-      <span class="item-desc">С фильтром, ваше или наше</span>
-    </li>
-    <li>
-      <span class="item-name">Тормозная система</span>
-      <span class="price">от 2 500 ₽</span>
-      <span class="item-desc">Колодки, диски, жидкость</span>
-    </li>
-    <li>
-      <span class="item-name">Подвеска</span>
-      <span class="price">от 3 000 ₽</span>
-      <span class="item-desc">Диагностика и замена узлов</span>
-    </li>
-    <li>
-      <span class="item-name">Шиномонтаж</span>
-      <span class="price">2 400 ₽</span>
-      <span class="item-desc">Комплект 16–18 дюймов</span>
-    </li>
-    <li>
-      <span class="item-name">Развал-схождение</span>
-      <span class="price">2 800 ₽</span>
-      <span class="item-desc">3D-стенд</span>
-    </li>
-    <li>
-      <span class="item-name">Замена ремня ГРМ</span>
-      <span class="price">от 6 500 ₽</span>
-      <span class="item-desc">С роликами, по регламенту</span>
-    </li>
+  <ul class="price-list">
+    <li class="price-row"><span class="price-name">Плановое ТО (масло + 3 фильтра)</span><span class="price-desc">Замена масла ДВС, масляного, воздушного и салонного</span><span class="price-val">1 500 ₽</span></li>
+    <li class="price-row"><span class="price-name">Замена ремня / цепи ГРМ</span><span class="price-desc">С проверкой роликов и помпы</span><span class="price-val">от 4 500 ₽</span></li>
+    <li class="price-row"><span class="price-name">Ремонт подвески</span><span class="price-desc">Стойки, рычаги, шаровые, сайлентблоки</span><span class="price-val">от 1 200 ₽</span></li>
+    <li class="price-row"><span class="price-name">Шиномонтаж (4 колеса)</span><span class="price-desc">Снятие, балансировка, установка</span><span class="price-val">от 1 600 ₽</span></li>
   </ul>
 </section>
 
-<section class="section container about" id="about">
-  <div>
-    <h2>Сервис без сюрпризов в счёте</h2>
-    <p>Работаем с 2014 года. В бокс пускают, подъёмник показывают, старые детали отдают в мешке.</p>
-    <p>Если ремонт не нужен — так и скажем. Диагностика стоит 800 ₽ и не превращается в «а ещё нужно поменять всё».</p>
-  </div>
-  <div>
-    <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Как попасть в сервис</h3>
-    <div class="steps" style="grid-template-columns:1fr;gap:20px">
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">01</div>
-        <div><h3>Запись</h3><p>Звонок или заявка. Уточняем машину и симптом.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">02</div>
-        <div><h3>Диагностика</h3><p>При вас, с показом на подъёмнике.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">03</div>
-        <div><h3>Смета</h3><p>Список работ и запчастей, согласуем до начала.</p></div>
-      </div>
-      <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-        <div class="step-num" style="font-size:24px;margin:0">04</div>
-        <div><h3>Ремонт</h3><p>Готово в тот же день или на следующий.</p></div>
-      </div>
+<section class="section container" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Записаться на подъёмник</h2>
+      <p class="lead" style="margin-top:12px">Согласуем смету до начала ремонта. Старые запчасти складываем в багажник.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, Промзона, ул. Коммунальная, 14</dd></div>
+        <div><dt>Режим работы</dt><dd>Пн–Сб 09:00–20:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (902) 000-04-04</dd></div>
+      </dl>
     </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Запись в сервис</h3>
+      
+  <div class="field"><label for="aCar">Марка, модель и год</label><input id="aCar" required placeholder="Toyota RAV4, 2018"></div>
+  <div class="field"><label for="aPhone">Телефон</label><input id="aPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="aWork">Что нужно сделать</label><input id="aWork" value="Замена масла и фильтра (~900 ₽)"></div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
-
-<section class="container" style="padding-bottom:16px">
-  <div class="cta">
-    <h2>Свободные окна на этой неделе</h2>
-    <p style="max-width:32ch;color:inherit;opacity:.85">Скажите марку и что беспокоит</p>
-    <a class="btn" href="#contact">Оставить заявку</a>
-  </div>
-</section>
-
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Записаться в сервис</h2>
-    <p>Оставьте номер и марку машины — перезвоним и предложим время.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, ул. Коммунальная, 8а</dd></div>
-      <div><dt>Часы работы</dt><dd>Пн–Сб 09:00–20:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
-  </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-auto">Как вас зовут</label>
-    <input id="f-name-auto" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-auto">Телефон</label>
-    <input id="f-phone-auto" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-auto">Комментарий</label>
-    <textarea id="f-msg-auto" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
-</section>
-
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Ось</b> — демонстрационная страница для категории «Авто». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Авто» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  const boxes = document.querySelectorAll('#autoOpts input');
+  const sumEl = document.getElementById('autoSum');
+  const timeEl = document.getElementById('autoTime');
+  const workEl = document.getElementById('aWork');
+  function calc() {
+    let s = 0, h = 0, names = [];
+    boxes.forEach((b) => {
+      if (b.checked) {
+        s += Number(b.value);
+        h += Number(b.dataset.h);
+        names.push(b.parentElement.textContent.trim());
+      }
+    });
+    sumEl.textContent = s.toLocaleString('ru-RU') + ' ₽';
+    timeEl.textContent = '~ ' + h.toFixed(1) + ' ч в боксе';
+    if (workEl) workEl.value = (names.length ? names.join(', ') : 'Осмотр') + ' (~' + s.toLocaleString('ru-RU') + ' ₽)';
+  }
+  boxes.forEach((b) => b.addEventListener('change', calc));
+})();
 </script>
 </body>
 </html>

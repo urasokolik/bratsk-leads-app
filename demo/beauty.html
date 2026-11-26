@@ -4,199 +4,165 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Тон — Красота в Братске · демо</title>
+<title>Тон — Красота · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #efeae5;
-  --surface: #faf7f4;
-  --ink: #221e1d;
-  --muted: #6a5f5b;
-  --dim: #8b7f7a;
-  --line: #ddd3cc;
-  --accent: #6b3f5e;
-  --accent-hover: #6b3f5e;
-  --accent-ink: #fdf8fb;
-  --font-display: 'Playfair Display';
-  --font-body: 'Inter';
-  --display-weight: 500;
+  --bg:#faf8f4; --surface:#ffffff; --ink:#1e1c1a; --muted:#625e57;
+  --dim:#8c867d; --line:#e6e0d6; --accent:#48634d; --accent-ink:#ffffff;
+  --font-display:'Cormorant'; --font-body:'Onest'; --display-weight:600;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-beauty h1{font-size:clamp(36px,4.8vw,60px);line-height:1.0;max-width:14ch}
+.booking-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.slot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.slot-btn{height:38px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:13.5px;font-variant-numeric:tabular-nums}
+.slot-btn.active{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+@media(max-width:640px){.slot-grid{grid-template-columns:repeat(2,1fr)}}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Тон<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Услуги</a>
-      <a href="#about">Салон</a>
-      <a href="#contact">Записаться</a>
+    <a class="logo" href="#top">Тон<i>.</i></a>
+    <span class="demo-badge">Демо · Красота</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#booking">Запись</a><a href="#prices">Прайс</a><a href="#contact">Контакты</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Записаться</a>
   </div>
 </header>
 <main id="main">
-<section class="hero-split">
-  <div class="container hero-split-in">
-    <div class="hero-copy">
-      <p class="kicker">Салон красоты · Братск</p>
+
+<section class="hero-beauty container" id="booking">
+  <div class="split-2">
+    <div class="hero-enter">
+      <p class="kicker"><span class="dot"></span>Салон красоты · Южная, 8а</p>
       <h1>Стрижка, цвет и уход — без записи за месяц</h1>
-      <p class="lead">Шесть мастеров на Южной. Онлайн-запись на сегодня, честные цены и кофе, пока сохнет голова.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Оставить заявку</a>
-        <a class="btn quiet" href="#services">Цены</a>
+      <p class="lead" style="margin-top:16px">Шесть мастеров с опытом от 5 лет. Считаем точную стоимость до начала работы, не навязываем лишних процедур.</p>
+      <div class="grid-3" style="margin-top:28px;gap:12px">
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600">4.9</div><div style="font-size:12.5px;color:var(--muted)">рейтинг в 2ГИС</div></div>
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600">6</div><div style="font-size:12.5px;color:var(--muted)">мастеров в штате</div></div>
+        <div class="panel-tight"><div class="num" style="font-size:22px;font-weight:600">15 мин</div><div style="font-size:12.5px;color:var(--muted)">ответ по записи</div></div>
       </div>
-      <p class="hero-meta">Южная, 8а · ежедневно 10:00–21:00</p>
     </div>
-    <div class="art">
-    <svg viewBox="0 0 640 460" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <rect x="228" y="58" width="184" height="276" rx="92"/>
-        <path d="M320 334v52M276 386h88"/>
-        <path d="M176 120c44 68 44 176 0 244" opacity=".4"/>
-        <path d="M468 132c30 30 30 68 0 98" opacity=".5"/>
-        <path d="M452 300h96M452 300v18M548 300v18M464 306v66M476 306v66M488 306v66M500 306v66M512 306v66M524 306v66M536 306v66" opacity=".55"/>
-      </g>
-      <path d="M268 240c22-34 44-34 66 0s44 34 66 0" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
-    </svg></div>
+    <div class="booking-card">
+      <h2 style="font-size:24px;margin-bottom:14px">Быстрая запись на сегодня</h2>
+      <div class="field">
+        <label for="bService">Услуга</label>
+        <select id="bService">
+          <option value="Женская стрижка — 1 400 ₽">Женская стрижка · 1 400 ₽</option>
+          <option value="Окрашивание в один тон — от 3 200 ₽">Окрашивание в один тон · от 3 200 ₽</option>
+          <option value="Маникюр с покрытием — 1 800 ₽">Маникюр с покрытием · 1 800 ₽</option>
+          <option value="Архитектура бровей — 1 100 ₽">Архитектура бровей · 1 100 ₽</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Свободные окна сегодня</label>
+        <div class="slot-grid" id="bSlots">
+          <button type="button" class="slot-btn active" data-t="11:30">11:30</button>
+          <button type="button" class="slot-btn" data-t="14:00">14:00</button>
+          <button type="button" class="slot-btn" data-t="16:30">16:30</button>
+          <button type="button" class="slot-btn" data-t="19:00">19:00</button>
+        </div>
+      </div>
+      <div id="bSummary" style="padding:12px 14px;border-radius:10px;background:var(--bg);border:1px solid var(--line);font-size:13.5px;margin-bottom:14px">
+        Выбрано: <b>Женская стрижка</b> на <b>11:30</b>
+      </div>
+      <a class="btn primary" href="#contact" style="width:100%">Перейти к подтверждению</a>
+    </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="cards">
-    <div class="card"><h3>Стрижка</h3><p>Форма, которую можно повторить дома. Учим укладке за пять минут.</p></div>
-    <div class="card"><h3>Цвет</h3><p>Окрашивание в один тон, AirTouch, тонирование. Подбираем под кожу и образ жизни.</p></div>
-    <div class="card"><h3>Уход</h3><p>Восстановление после окрашивания и домашний уход, который реально работает.</p></div>
-  </div>
-</section>
-
-<section class="section container" id="services">
+<section class="section container" id="prices">
   <div class="section-head">
     <h2>Услуги и цены</h2>
-    <p>Цена зависит от длины волос. Точную сумму назовём до начала работы.</p>
+    <p>Точную стоимость с учётом длины волос мастер называет до начала работы.</p>
   </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Женская стрижка</span>
-      <span class="price">1 400 ₽</span>
-      <span class="item-desc">Мытьё, стрижка, укладка</span>
-    </li>
-    <li>
-      <span class="item-name">Мужская стрижка</span>
-      <span class="price">900 ₽</span>
-      <span class="item-desc">Машинка и ножницы, борода отдельно</span>
-    </li>
-    <li>
-      <span class="item-name">Окрашивание в один тон</span>
-      <span class="price">от 3 500 ₽</span>
-      <span class="item-desc">Стойкая краска, уход включён</span>
-    </li>
-    <li>
-      <span class="item-name">AirTouch</span>
-      <span class="price">от 6 500 ₽</span>
-      <span class="item-desc">Сложное окрашивание, от четырёх часов</span>
-    </li>
-    <li>
-      <span class="item-name">Уход Olaplex</span>
-      <span class="price">2 200 ₽</span>
-      <span class="item-desc">Восстановление после осветления</span>
-    </li>
-    <li>
-      <span class="item-name">Маникюр с покрытием</span>
-      <span class="price">1 500 ₽</span>
-      <span class="item-desc">Аппаратный, гель-лак</span>
-    </li>
-    <li>
-      <span class="item-name">Брови</span>
-      <span class="price">700 ₽</span>
-      <span class="item-desc">Коррекция и окрашивание</span>
-    </li>
+  <ul class="price-list">
+    <li class="price-row"><span class="price-name">Женская стрижка + укладка</span><span class="price-desc">Мытьё головы, форма, сушка</span><span class="price-val">1 400 ₽</span></li>
+    <li class="price-row"><span class="price-name">Окрашивание в один тон</span><span class="price-desc">Краситель и уход включены</span><span class="price-val">от 3 200 ₽</span></li>
+    <li class="price-row"><span class="price-name">Сложное окрашивание AirTouch</span><span class="price-desc">Плавный переход, тонирование</span><span class="price-val">от 6 800 ₽</span></li>
+    <li class="price-row"><span class="price-name">Маникюр + гель-лак</span><span class="price-desc">Снятие старого покрытия включено</span><span class="price-val">1 800 ₽</span></li>
+    <li class="price-row"><span class="price-name">Брови: коррекция и окрашивание</span><span class="price-desc">Краска или хна, уход</span><span class="price-val">1 100 ₽</span></li>
   </ul>
 </section>
 
-<section class="section container" id="about">
-  <div class="about" style="padding:0">
+<section class="section container" id="contact">
+  <div class="contact-grid">
     <div>
-      <h2>Салон на шесть кресел</h2>
-      <p>Мы не сеть и не франшиза. Работаем в одном помещении с 2017 года, мастера знают постоянных клиентов по имени.</p>
-      <p>Если стрижка не подошла — переделаем в течение недели бесплатно. Это написано в прайсе, а не только на словах.</p>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Подтвердить запись или спросить</h2>
+      <p class="lead" style="margin-top:12px">Администратор подтвердит время в WhatsApp в течение 15 минут.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, ул. Южная, 8а</dd></div>
+        <div><dt>Режим работы</dt><dd>Ежедневно 10:00–21:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (964) 000-08-08</dd></div>
+      </dl>
     </div>
-    <div>
-      <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Как записаться</h3>
-      <div class="steps" style="grid-template-columns:1fr;gap:20px">
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">01</div>
-          <div><h3>Выберите услугу</h3><p>В прайсе указана цена и длительность. Если сомневаетесь — позвоните.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">02</div>
-          <div><h3>Выберите время</h3><p>Онлайн-запись показывает свободные окна на две недели вперёд.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">03</div>
-          <div><h3>Приходите</h3><p>За десять минут до времени, с чистыми волосами или без — решим на месте.</p></div>
-        </div>
-      </div>
-    </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Подтвердить запись</h3>
+      
+  <div class="field"><label for="bnName">Ваше имя</label><input id="bnName" required placeholder="Елена"></div>
+  <div class="field"><label for="bnPhone">Телефон</label><input id="bnPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="bnNote">Услуга и время</label><input id="bnNote" value="Женская стрижка — 1 400 ₽, в 11:30"></div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
-
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Записаться</h2>
-    <p>Оставьте номер — перезвоним в течение 15 минут в рабочее время.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, ул. Южная, 8а</dd></div>
-      <div><dt>Часы работы</dt><dd>Ежедневно 10:00–21:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
-  </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-beauty">Как вас зовут</label>
-    <input id="f-name-beauty" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-beauty">Телефон</label>
-    <input id="f-phone-beauty" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-beauty">Комментарий</label>
-    <textarea id="f-msg-beauty" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
-</section>
-
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Тон</b> — демонстрационная страница для категории «Красота». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Красота» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  const srv = document.getElementById('bService');
+  const sum = document.getElementById('bSummary');
+  const inp = document.getElementById('bnNote');
+  let time = '11:30';
+  function upd() {
+    const s = srv.value;
+    sum.innerHTML = 'Выбрано: <b>' + s.split('—')[0].trim() + '</b> на <b>' + time + '</b>';
+    if (inp) inp.value = s + ', в ' + time;
+  }
+  srv.addEventListener('change', upd);
+  document.querySelectorAll('#bSlots .slot-btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#bSlots .slot-btn').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      time = b.dataset.t;
+      upd();
+    });
+  });
+})();
 </script>
 </body>
 </html>

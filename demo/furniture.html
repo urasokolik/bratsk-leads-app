@@ -4,205 +4,164 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Форма — Мебель в Братске · демо</title>
+<title>Кедр — Мебель · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #f0ede6;
-  --surface: #faf8f2;
-  --ink: #23211c;
-  --muted: #635f55;
-  --dim: #857f72;
-  --line: #ddd8cb;
-  --accent: #4f5b3a;
-  --accent-hover: #4f5b3a;
-  --accent-ink: #f8f8f2;
-  --font-display: 'Lora';
-  --font-body: 'Onest';
-  --display-weight: 500;
+  --bg:#f4efe7; --surface:#fcfaf6; --ink:#221d17; --muted:#695f54;
+  --dim:#94897c; --line:#e2d9cb; --accent:#8c532b; --accent-ink:#ffffff;
+  --font-display:'Cormorant'; --font-body:'Manrope'; --display-weight:600;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-furn h1{font-size:clamp(36px,4.8vw,60px);line-height:1.0;max-width:13ch}
+.swatch-row{display:flex;gap:10px;flex-wrap:wrap}
+.swatch-btn{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);cursor:pointer;font-size:13.5px}
+.swatch-btn.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);font-weight:600}
+.swatch-dot{width:18px;height:18px;border-radius:4px;border:1px solid rgba(0,0,0,.15)}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Форма<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Изделия</a>
-      <a href="#about">Мастерская</a>
-      <a href="#contact">Замер</a>
+    <a class="logo" href="#top">Кедр<i>.</i></a>
+    <span class="demo-badge">Демо · Мебель</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#config">Конфигуратор</a><a href="#models">Цены</a><a href="#contact">Замер</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Рассчитать проект</a>
   </div>
 </header>
 <main id="main">
-<section class="hero-split">
-  <div class="container hero-split-in">
-    <div class="hero-copy">
-      <p class="kicker">Мебельная мастерская · Братск</p>
-      <h1>Мебель, которую собирают в Братске</h1>
-      <p class="lead">Кухни, шкафы и столы по вашим размерам. Замер бесплатно, срок три недели, сборка включена.</p>
+
+<section class="hero-furn container" id="config">
+  <div class="split-2">
+    <div class="hero-enter">
+      <p class="kicker"><span class="dot"></span>Собственный цех в Братске</p>
+      <h1>Кухни и шкафы точно по стенам вашей квартиры</h1>
+      <p class="lead" style="margin-top:16px">Изготавливаем за 18–25 рабочих дней. Фурнитура с доводчиками, монтаж под ключ с врезкой техники.</p>
       <div class="actions">
-        <a class="btn primary" href="#contact">Оставить заявку</a>
-        <a class="btn quiet" href="#services">Цены</a>
+        <a class="btn primary" href="#contact">Вызвать замерщика</a>
+        <a class="btn quiet" href="#models">Прайс по изделиям</a>
       </div>
-      <p class="hero-meta">Янгеля, 122 · пн–сб 10:00–19:00</p>
     </div>
-    <div class="art">
-    <svg viewBox="0 0 640 460" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <path d="M150 300v-96a66 66 0 0 1 66-66h134a66 66 0 0 1 66 66v96"/>
-        <rect x="126" y="236" width="314" height="88" rx="26"/>
-        <path d="M150 300v52M416 300v52"/>
-        <rect x="186" y="196" width="112" height="62" rx="12" opacity=".45"/>
-        <path d="M486 372V150M462 150h48l22-36" opacity=".7"/>
-        <path d="M452 372h68" stroke-width="4"/>
-      </g>
-      <path d="M126 372h314" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
-      <ellipse cx="283" cy="392" rx="150" ry="16" fill="var(--accent)" opacity=".18"/>
-    </svg></div>
+    <div class="panel">
+      <h2 style="font-size:23px;margin-bottom:14px">Конфигуратор стоимости</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px">1. Материал фасадов</p>
+      <div class="swatch-row" id="furnMat">
+        <button type="button" class="swatch-btn active" data-pm="28000" data-mat="Матовый МДФ"><span class="swatch-dot" style="background:#d9d4cb"></span>Матовый МДФ</button>
+        <button type="button" class="swatch-btn" data-pm="34000" data-mat="Пластик HPL"><span class="swatch-dot" style="background:#56605a"></span>Пластик HPL</button>
+        <button type="button" class="swatch-btn" data-pm="42000" data-mat="Шпон дуба"><span class="swatch-dot" style="background:#a67b52"></span>Шпон дуба</button>
+      </div>
+      <div style="margin-top:18px">
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px">
+          <span style="color:var(--muted)">2. Длина гарнитура / шкафа</span>
+          <strong class="num" id="furnLenLbl">3.2 м</strong>
+        </div>
+        <input type="range" id="furnLen" min="1.8" max="6.0" step="0.2" value="3.2">
+      </div>
+      <div style="margin-top:18px;padding:16px;border-radius:12px;background:var(--bg);border:1px solid var(--line);display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:12.5px;color:var(--muted)">Предварительно с установкой</div>
+          <div style="font-size:13.5px;color:var(--muted)" id="furnMatInfo">Матовый МДФ · 3.2 м</div>
+        </div>
+        <div class="num" id="furnSum" style="font-size:25px;font-weight:600;color:var(--accent)">89 600 ₽</div>
+      </div>
+      <a class="btn primary" href="#contact" style="width:100%;margin-top:14px">Заказать 3D-проект с этим расчётом</a>
+    </div>
   </div>
 </section>
 
-<section class="section container">
-  <div class="cards">
-    <div class="card"><h3>Кухни</h3><p>Модули, фасады, столешница. Планировка под вашу готовку, а не под каталог.</p></div>
-    <div class="card"><h3>Шкафы</h3><p>Встроенные и корпусные. Двери купе, распашные, под потолок.</p></div>
-    <div class="card"><h3>Столы и кровати</h3><p>Массив, шпон, ЛДСП. Покрытие, которое не боится воды.</p></div>
-  </div>
-</section>
-
-<section class="section container" id="services">
-  <div class="section-head">
-    <h2>Изделия и цены</h2>
-    <p>Цена за базовую комплектацию. Фурнитура и материалы — по выбору, всё считаем заранее.</p>
-  </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Кухня</span>
-      <span class="price">от 85 000 ₽</span>
-      <span class="item-desc">Прямая, до 3 метров, с фурнитурой</span>
-    </li>
-    <li>
-      <span class="item-name">Шкаф-купе</span>
-      <span class="price">от 42 000 ₽</span>
-      <span class="item-desc">До потолка, с наполнением</span>
-    </li>
-    <li>
-      <span class="item-name">Стол из массива</span>
-      <span class="price">28 000 ₽</span>
-      <span class="item-desc">Дуб или ясень, 120×80</span>
-    </li>
-    <li>
-      <span class="item-name">Кровать</span>
-      <span class="price">34 000 ₽</span>
-      <span class="item-desc">Двуспальная, с подъёмным механизмом</span>
-    </li>
-    <li>
-      <span class="item-name">Комод</span>
-      <span class="price">19 000 ₽</span>
-      <span class="item-desc">Пять ящиков, доводчики</span>
-    </li>
-    <li>
-      <span class="item-name">Детская</span>
-      <span class="price">от 56 000 ₽</span>
-      <span class="item-desc">Кровать, стол, шкаф в одном стиле</span>
-    </li>
-    <li>
-      <span class="item-name">Столешница</span>
-      <span class="price">от 12 000 ₽</span>
-      <span class="item-desc">Кварц, акрил, массив</span>
-    </li>
+<section class="section container" id="models">
+  <div class="section-head"><h2>Типовые проекты</h2><p>Доставка и подъём по Братску включены в итоговую смету.</p></div>
+  <ul class="price-list">
+    <li class="price-row"><span class="price-name">Прямая кухня до 3 м</span><span class="price-desc">МДФ плёнка/эмаль, столешница 38 мм</span><span class="price-val">от 78 000 ₽</span></li>
+    <li class="price-row"><span class="price-name">Угловая кухня до потолка</span><span class="price-desc">Антресоли, доводчики Blum/Boyard</span><span class="price-val">от 115 000 ₽</span></li>
+    <li class="price-row"><span class="price-name">Шкаф-купе встроенный</span><span class="price-desc">Алюминиевый профиль, зеркало/ЛДСП</span><span class="price-val">от 48 000 ₽</span></li>
+    <li class="price-row"><span class="price-name">Прихожая с мягкой зоной</span><span class="price-desc">Тумба, рейки, вешалка, антресоль</span><span class="price-val">от 42 000 ₽</span></li>
   </ul>
 </section>
 
-<section class="section container" id="about">
-  <div class="about" style="padding:0">
+<section class="section container" id="contact">
+  <div class="contact-grid">
     <div>
-      <h2>Мастерская на Янгеля</h2>
-      <p>Делаем мебель с 2015 года. Свой цех, свой монтаж, без посредников — поэтому сроки не уезжают на месяц.</p>
-      <p>На замере показываем образцы покрытий и фурнитуры. Если бюджет не сходится, предлагаем решение дешевле, а не «доплатите потом».</p>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Заказать бесплатный замер и 3D-проект</h2>
+      <p class="lead" style="margin-top:12px">Привезём образцы фасадов и столешниц прямо к вам домой, чтобы подобрать цвет при вашем освещении.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, Индустриальный проезд, 5</dd></div>
+        <div><dt>Режим работы</dt><dd>Пн–Сб 10:00–19:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (983) 000-45-45</dd></div>
+      </dl>
     </div>
-    <div>
-      <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">От замера до установки</h3>
-      <div class="steps" style="grid-template-columns:1fr;gap:20px">
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">01</div>
-          <div><h3>Замер</h3><p>Бесплатно, с образцами материалов.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">02</div>
-          <div><h3>Проект</h3><p>Чертёж и смета. Правим, пока не устроит.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">03</div>
-          <div><h3>Производство</h3><p>Три недели, фото готовых модулей.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">04</div>
-          <div><h3>Установка</h3><p>За один-два дня, мусор вывозим сами.</p></div>
-        </div>
-      </div>
-    </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Заявка на замер</h3>
+      
+  <div class="field"><label for="fuName">Ваше имя</label><input id="fuName" required placeholder="Ольга"></div>
+  <div class="field"><label for="fuPhone">Телефон</label><input id="fuPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="fuNote">Параметры проекта</label><input id="fuNote" value="Матовый МДФ, длина 3.2 м (~89 600 ₽)"></div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
-
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Записаться на замер</h2>
-    <p>Оставьте номер — согласуем время и приедем с образцами.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, ул. Янгеля, 122</dd></div>
-      <div><dt>Часы работы</dt><dd>Пн–Сб 10:00–19:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
-  </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-furniture">Как вас зовут</label>
-    <input id="f-name-furniture" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-furniture">Телефон</label>
-    <input id="f-phone-furniture" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-furniture">Комментарий</label>
-    <textarea id="f-msg-furniture" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
-</section>
-
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Форма</b> — демонстрационная страница для категории «Мебель». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Мебель» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  let pm = 28000, mat = 'Матовый МДФ';
+  const len = document.getElementById('furnLen');
+  const lbl = document.getElementById('furnLenLbl');
+  const info = document.getElementById('furnMatInfo');
+  const sum = document.getElementById('furnSum');
+  const note = document.getElementById('fuNote');
+  function upd() {
+    const l = Number(len.value);
+    const total = Math.round(l * pm);
+    lbl.textContent = l.toFixed(1) + ' м';
+    info.textContent = mat + ' · ' + l.toFixed(1) + ' м';
+    sum.textContent = total.toLocaleString('ru-RU') + ' ₽';
+    if (note) note.value = mat + ', длина ' + l.toFixed(1) + ' м (~' + total.toLocaleString('ru-RU') + ' ₽)';
+  }
+  document.querySelectorAll('#furnMat .swatch-btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('#furnMat .swatch-btn').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active');
+      pm = Number(b.dataset.pm);
+      mat = b.dataset.mat;
+      upd();
+    });
+  });
+  len.addEventListener('input', upd);
+})();
 </script>
 </body>
 </html>

@@ -4,210 +4,185 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Полка — Магазины в Братске · демо</title>
+<title>Север — Магазины · демо</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css">
 <style>
 :root{
-  --bg: #f5f3ee;
-  --surface: #fffdf8;
-  --ink: #1b1d21;
-  --muted: #5d6166;
-  --dim: #868a90;
-  --line: #dedbd3;
-  --accent: #2f4f9e;
-  --accent-hover: #2f4f9e;
-  --accent-ink: #ffffff;
-  --font-display: 'Onest';
-  --font-body: 'Inter';
-  --display-weight: 600;
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#12151c; --muted:#5a6270;
+  --dim:#868f9e; --line:#e1e4ea; --accent:#2356d1; --accent-ink:#ffffff;
+  --font-display:'Onest'; --font-body:'Onest'; --display-weight:600;
+  --radius-card:16px; --radius-btn:10px;
 }
+
+.hero-{padding-top:;padding-bottom:}
+.hero-store h1{font-size:clamp(34px,4.4vw,54px);max-width:15ch}
+.prod-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.prod-cat{font-size:12px;color:var(--muted)}
+.prod-name{font-weight:600;font-size:16px}
+.prod-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.cart-bar{margin-top:20px;padding:16px 20px;border-radius:14px;background:var(--surface);border:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+
 </style>
 </head>
-<body>
+<body id="top">
 <a class="skip" href="#main">К содержанию</a>
 <header class="header">
   <div class="container header-in">
-    <a class="logo" href="#main">Полка<i>.</i></a>
-    <span class="demo-badge">демо</span>
-    <nav class="nav" aria-label="Разделы страницы">
-      <a href="#services">Товары</a>
-      <a href="#about">Магазин</a>
-      <a href="#contact">Заказ</a>
+    <a class="logo" href="#top">Север<i>.</i></a>
+    <span class="demo-badge">Демо · Магазины</span>
+    <nav class="nav" aria-label="Навигация">
+      <a href="#catalog">Каталог</a><a href="#delivery">Доставка</a><a href="#contact">Заказ</a>
+      <a href="index.html">Все демо</a>
     </nav>
-    <a class="btn primary" href="#contact">Заявка</a>
+    <a class="btn primary sm" href="#contact">Оформить заказ</a>
   </div>
 </header>
 <main id="main">
-<section class="hero-split">
-  <div class="container hero-split-in">
-    <div class="hero-copy">
-      <p class="kicker">Магазин для дома · Братск</p>
-      <h1>Товары для дома, которые правда нужны</h1>
-      <p class="lead">Посуда, текстиль, бытовая химия и мелочи. Самовывоз в день заказа, доставка по Братску — 300 ₽.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Оставить заявку</a>
-        <a class="btn quiet" href="#services">Цены</a>
-      </div>
-      <p class="hero-meta">Кирова, 45 · ежедневно 10:00–20:00</p>
-    </div>
-    <div class="art">
-    <svg viewBox="0 0 640 460" aria-hidden="true">
-      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <rect x="96" y="78" width="448" height="300" rx="6"/>
-        <path d="M96 178h448M96 278h448"/>
-        <rect x="128" y="112" width="54" height="66" rx="6"/>
-        <rect x="200" y="126" width="44" height="52" rx="6"/>
-        <rect x="264" y="112" width="62" height="66" rx="6"/>
-        <rect x="352" y="132" width="40" height="46" rx="6"/>
-        <rect x="414" y="112" width="96" height="66" rx="6"/>
-        <rect x="128" y="212" width="72" height="66" rx="6"/>
-        <rect x="224" y="228" width="52" height="50" rx="6"/>
-        <rect x="300" y="212" width="66" height="66" rx="6"/>
-        <rect x="390" y="236" width="120" height="42" rx="6"/>
-        <rect x="128" y="312" width="110" height="66" rx="6"/>
-        <rect x="262" y="326" width="58" height="52" rx="6"/>
-        <rect x="344" y="312" width="80" height="66" rx="6"/>
-        <rect x="448" y="326" width="62" height="52" rx="6"/>
-      </g>
-      <rect x="264" y="112" width="62" height="66" rx="6" fill="var(--accent)" opacity=".25"/>
-      <rect x="344" y="312" width="80" height="66" rx="6" fill="var(--accent)" opacity=".25"/>
-    </svg></div>
+
+<section class="hero-store container">
+  <div class="hero-enter">
+    <p class="kicker"><span class="dot"></span>Магазин в центре · Советская, 14</p>
+    <h1>Товары для дома и отдыха в наличии в Братске</h1>
+    <p class="lead" style="margin-top:14px">Не нужно ждать доставку с маркетплейса 10 дней. Можно посмотреть вживую, примерить и забрать сегодня.</p>
   </div>
 </section>
 
-<section class="section container">
-  <div class="cards">
-    <div class="card"><h3>Посуда</h3><p>Кастрюли, сковороды, ножи. То, что не нужно менять каждый год.</p></div>
-    <div class="card"><h3>Текстиль</h3><p>Постельное, полотенца, пледы. Плотность и состав пишем на ценнике.</p></div>
-    <div class="card"><h3>Хозяйство</h3><p>Химия, сушилки, органайзеры. Подскажем, что действительно работает.</p></div>
-  </div>
-</section>
-
-<section class="section container" id="services">
+<section class="section container" id="catalog" style="padding-top:32px">
   <div class="section-head">
-    <h2>Что есть в наличии</h2>
-    <p>Наличие обновляем каждый день. Если товара нет — привезём под заказ за неделю.</p>
-  </div>
-  <ul class="items">
-    <li>
-      <span class="item-name">Набор кастрюль</span>
-      <span class="price">5 900 ₽</span>
-      <span class="item-desc">Три штуки, нержавейка, крышки</span>
-    </li>
-    <li>
-      <span class="item-name">Постельное бельё</span>
-      <span class="price">2 800 ₽</span>
-      <span class="item-desc">Комплект 2-спальный, сатин</span>
-    </li>
-    <li>
-      <span class="item-name">Термос</span>
-      <span class="price">1 900 ₽</span>
-      <span class="item-desc">1 литр, держит 12 часов</span>
-    </li>
-    <li>
-      <span class="item-name">Сушилка для белья</span>
-      <span class="price">1 400 ₽</span>
-      <span class="item-desc">Напольная, 15 метров</span>
-    </li>
-    <li>
-      <span class="item-name">Набор ножей</span>
-      <span class="price">3 200 ₽</span>
-      <span class="item-desc">Пять штук и подставка</span>
-    </li>
-    <li>
-      <span class="item-name">Корзина для белья</span>
-      <span class="price">1 100 ₽</span>
-      <span class="item-desc">С крышкой, 40 литров</span>
-    </li>
-    <li>
-      <span class="item-name">Плед</span>
-      <span class="price">1 600 ₽</span>
-      <span class="item-desc">Хлопок, 150×200</span>
-    </li>
-  </ul>
-</section>
-
-<section class="section container" id="about">
-  <div class="about" style="padding:0">
-    <div>
-      <h2>Магазин, куда заходят за конкретным</h2>
-      <p>Мы не продаём всё подряд. Полтораста позиций, которые сами используем дома: посуда, текстиль, уборка.</p>
-      <p>На ценнике написано, из чего вещь и сколько живёт. Если сомневаетесь — спросите, сотрудник объяснит без «берите, хорошая».</p>
-    </div>
-    <div>
-      <h3 style="font-size:13px;font-family:var(--font-body);color:var(--muted);margin-bottom:16px">Как заказать</h3>
-      <div class="steps" style="grid-template-columns:1fr;gap:20px">
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">01</div>
-          <div><h3>Выберите товар</h3><p>Список и цены — выше. Уточнить наличие можно по телефону.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">02</div>
-          <div><h3>Оформите</h3><p>Оставьте номер, мы подтвердим и отложим на два часа.</p></div>
-        </div>
-        <div class="step" style="display:grid;grid-template-columns:48px 1fr;gap:12px">
-          <div class="step-num" style="font-size:24px;margin:0">03</div>
-          <div><h3>Заберите</h3><p>Самовывоз на Кирова или доставка в удобное время.</p></div>
-        </div>
-      </div>
+    <h2>Каталог в наличии</h2>
+    <div class="tabs" id="storeTabs">
+      <button class="tab active" type="button" data-cat="all">Все</button>
+      <button class="tab" type="button" data-cat="home">Для дома</button>
+      <button class="tab" type="button" data-cat="travel">Для отдыха</button>
     </div>
   </div>
+  <div class="grid-3" id="prodGrid">
+    <div class="prod-card" data-pcat="home">
+      <div class="prod-cat">Для дома</div>
+      <div class="prod-name">Плед из мериноса 140×200</div>
+      <div style="font-size:13.5px;color:var(--muted)">Тёплый, не колется, 3 оттенка в наличии</div>
+      <div class="prod-foot"><strong class="num">3 400 ₽</strong><button type="button" class="btn sm add-cart" data-item="Плед из мериноса (3 400 ₽)" data-price="3400">В подборку</button></div>
+    </div>
+    <div class="prod-card" data-pcat="travel">
+      <div class="prod-cat">Для отдыха</div>
+      <div class="prod-name">Термос 1.2 л, стальной</div>
+      <div style="font-size:13.5px;color:var(--muted)">Держит кипяток 24 часа, узкое горло</div>
+      <div class="prod-foot"><strong class="num">2 150 ₽</strong><button type="button" class="btn sm add-cart" data-item="Термос 1.2 л (2 150 ₽)" data-price="2150">В подборку</button></div>
+    </div>
+    <div class="prod-card" data-pcat="home">
+      <div class="prod-cat">Для дома</div>
+      <div class="prod-name">Набор керамических кружек, 2 шт</div>
+      <div style="font-size:13.5px;color:var(--muted)">Ручная глазурь, можно в посудомойку</div>
+      <div class="prod-foot"><strong class="num">1 650 ₽</strong><button type="button" class="btn sm add-cart" data-item="Набор кружек (1 650 ₽)" data-price="1650">В подборку</button></div>
+    </div>
+    <div class="prod-card" data-pcat="travel">
+      <div class="prod-cat">Для отдыха</div>
+      <div class="prod-name">Фонарь кемпинговый USB-C</div>
+      <div style="font-size:13.5px;color:var(--muted)">До 40 часов света, защита от дождя</div>
+      <div class="prod-foot"><strong class="num">1 890 ₽</strong><button type="button" class="btn sm add-cart" data-item="Фонарь кемпинговый (1 890 ₽)" data-price="1890">В подборку</button></div>
+    </div>
+    <div class="prod-card" data-pcat="home">
+      <div class="prod-cat">Для дома</div>
+      <div class="prod-name">Аромадиффузор «Хвоя и кедр»</div>
+      <div style="font-size:13.5px;color:var(--muted)">100 мл, хватает на 2–3 месяца</div>
+      <div class="prod-foot"><strong class="num">1 290 ₽</strong><button type="button" class="btn sm add-cart" data-item="Аромадиффузор (1 290 ₽)" data-price="1290">В подборку</button></div>
+    </div>
+    <div class="prod-card" data-pcat="travel">
+      <div class="prod-cat">Для отдыха</div>
+      <div class="prod-name">Рюкзак городской 22 л</div>
+      <div style="font-size:13.5px;color:var(--muted)">Отдел для ноутбука 16", влагозащита</div>
+      <div class="prod-foot"><strong class="num">4 200 ₽</strong><button type="button" class="btn sm add-cart" data-item="Рюкзак 22 л (4 200 ₽)" data-price="4200">В подборку</button></div>
+    </div>
+  </div>
+  <div class="cart-bar">
+    <div><span style="color:var(--muted);font-size:13.5px">Выбрано в подборку: </span><strong class="num" id="cartInfo">0 товаров · 0 ₽</strong></div>
+    <a class="btn primary sm" href="#contact">Оформить бронь</a>
+  </div>
 </section>
 
-<section class="section container contact" id="contact">
-  <div>
-    <h2>Оставить заказ</h2>
-    <p>Напишите, что нужно, — подтвердим наличие и отложим.</p>
-    <dl>
-      <div><dt>Адрес</dt><dd>Братск, ул. Кирова, 45</dd></div>
-      <div><dt>Часы работы</dt><dd>Ежедневно 10:00–20:00</dd></div>
-      <div><dt>Телефон</dt><dd>Добавим ваш номер в рабочей версии</dd></div>
-    </dl>
-    
+<section class="section container" id="delivery">
+  <div class="grid-3">
+    <div class="panel-tight"><h3 style="font-size:18px">Самовывоз за час</h3><p style="font-size:14px;color:var(--muted);margin-top:6px">Отложим заказ на кассе, забрать можно в тот же день.</p></div>
+    <div class="panel-tight"><h3 style="font-size:18px">Доставка по городу</h3><p style="font-size:14px;color:var(--muted);margin-top:6px">Привезём по Братску вечером в день заказа от 250 ₽.</p></div>
+    <div class="panel-tight"><h3 style="font-size:18px">Обмен 14 дней</h3><p style="font-size:14px;color:var(--muted);margin-top:6px">Если подарок не подошёл — обменяем без лишних вопросов.</p></div>
   </div>
-  <form class="form" data-demo-form aria-labelledby="form-title">
-  <h3 id="form-title" style="font-size:21px;margin-bottom:16px">Оставить заявку</h3>
-  <div class="field">
-    <label for="f-name-store">Как вас зовут</label>
-    <input id="f-name-store" name="name" autocomplete="name" placeholder="Имя" required>
-  </div>
-  <div class="field">
-    <label for="f-phone-store">Телефон</label>
-    <input id="f-phone-store" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
-  </div>
-  <div class="field">
-    <label for="f-msg-store">Комментарий</label>
-    <textarea id="f-msg-store" name="message" placeholder="Что нужно и когда удобно"></textarea>
-  </div>
-  <label class="check">
-    <input type="checkbox" name="consent" required>
-    <span>Согласен на обработку персональных данных. Это демонстрационная форма.</span>
-  </label>
-  <button class="btn primary block" type="submit">Отправить</button>
-  <p class="form-note" role="status" aria-live="polite"></p>
-</form>
 </section>
 
+<section class="section container" id="contact">
+  <div class="contact-grid">
+    <div>
+      <p class="kicker"><span class="dot"></span>Братск</p>
+      <h2 style="font-size:clamp(28px,3.2vw,40px)">Забронировать или заказать доставку</h2>
+      <p class="lead" style="margin-top:12px">Отложим товар на 24 часа в магазине на Советской или привезём курьером по Братску.</p>
+      <dl class="contact-list">
+        <div><dt>Адрес</dt><dd>Братск, ул. Советская, 14</dd></div>
+        <div><dt>Режим работы</dt><dd>Ежедневно 10:00–20:00</dd></div>
+        <div><dt>Телефон (пример)</dt><dd class="num">+7 (908) 000-14-14</dd></div>
+      </dl>
+    </div>
+    <form class="form" data-demo-form>
+      <h3 style="font-size:20px;margin-bottom:18px">Забронировать заказ</h3>
+      
+  <div class="field"><label for="sName">Имя</label><input id="sName" required placeholder="Сергей"></div>
+  <div class="field"><label for="sPhone">Телефон</label><input id="sPhone" type="tel" required placeholder="+7 900 000-00-00"></div>
+  <div class="field"><label for="sList">Выбранные товары</label><textarea id="sList" placeholder="Отметьте товары выше или напишите вручную"></textarea></div>
+
+      <label class="check">
+        <input type="checkbox" required>
+        <span>Согласие на обработку заявки (в демо-версии данные никуда не отправляются)</span>
+      </label>
+      <button class="btn primary" type="submit" style="width:100%">Отправить заявку</button>
+      <p class="form-note" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container footer-in">
-    <p class="demo-note"><b>Полка</b> — демонстрационная страница для категории «Магазины». Не действующий сайт компании: названия, цены и адреса — пример. Фото, тексты и контакты заменим на ваши.</p>
-    <p><a href="index.html">Все примеры</a></p>
+    <p>Демонстрационная страница для категории «Магазины» · Братск. Названия, адреса и цены — пример.</p>
+    <p><a href="index.html">Все 10 демо-сайтов</a></p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('form[data-demo-form]').forEach(function (form) {
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    var note = form.querySelector('.form-note');
-    note.textContent = 'Это демо: заявка не отправлена. В рабочей версии она придёт вам в Telegram.';
+document.querySelectorAll('[data-demo-form]').forEach((form) => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const note = form.querySelector('.form-note');
+    note.textContent = 'Заявка зафиксирована (демо-режим: реальная отправка подключится при запуске сайта).';
     note.classList.add('ok');
     form.reset();
   });
 });
+</script>
+<script>
+(function(){
+  const cart = [];
+  const info = document.getElementById('cartInfo');
+  const list = document.getElementById('sList');
+  document.querySelectorAll('#storeTabs .tab').forEach((t) => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('#storeTabs .tab').forEach((x) => x.classList.remove('active'));
+      t.classList.add('active');
+      const cat = t.dataset.cat;
+      document.querySelectorAll('.prod-card').forEach((c) => {
+        c.style.display = (cat === 'all' || c.dataset.pcat === cat) ? 'flex' : 'none';
+      });
+    });
+  });
+  document.querySelectorAll('.add-cart').forEach((b) => {
+    b.addEventListener('click', () => {
+      cart.push({ name: b.dataset.item, price: Number(b.dataset.price) });
+      b.textContent = 'Добавлено';
+      b.classList.add('primary');
+      const sum = cart.reduce((a, x) => a + x.price, 0);
+      info.textContent = cart.length + ' поз. · ' + sum.toLocaleString('ru-RU') + ' ₽';
+      if (list) list.value = cart.map((x) => x.name).join('\n') + '\nИтого: ' + sum.toLocaleString('ru-RU') + ' ₽';
+    });
+  });
+})();
 </script>
 </body>
 </html>
